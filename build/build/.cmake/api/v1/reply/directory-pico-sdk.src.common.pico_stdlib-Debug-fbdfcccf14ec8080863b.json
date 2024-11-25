@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/common/pico_stdlib",
+		"source" : "/user/HS402/js03461/com1031/pico-sdk/src/common/pico_stdlib"
+	}
+}

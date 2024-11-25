@@ -1,0 +1,3 @@
+/user/HS402/js03461/com1031/coursework/build/pioasm/CMakeFiles/pioasm.dir
+/user/HS402/js03461/com1031/coursework/build/pioasm/CMakeFiles/edit_cache.dir
+/user/HS402/js03461/com1031/coursework/build/pioasm/CMakeFiles/rebuild_cache.dir

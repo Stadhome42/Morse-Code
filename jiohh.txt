@@ -1,0 +1,33 @@
+const int buttonPin = 16; // Change this to the pin connected to your button
+unsigned long pressStartTime = 0;
+unsigned long releaseStartTime = 0;
+bool buttonState = HIGH; // Assuming the button is wired to pull the pin LOW when pressed
+
+void setup() {
+  pinMode(buttonPin, INPUT_PULLUP); // Configure the button pin as INPUT_PULLUP
+  Serial.begin(9600); // Initialize serial communication for debugging
+}
+
+void loop() {
+  int currentButtonState = digitalRead(buttonPin);
+
+  // Check for button press
+  if (currentButtonState == LOW && buttonState == HIGH) {
+    pressStartTime = millis(); // Record the time when the button is pressed
+    Serial.println("Button pressed");
+  }
+
+  // Check for button release
+  if (currentButtonState == HIGH && buttonState == LOW) {
+    releaseStartTime = millis(); // Record the time when the button is released
+    Serial.println("Button released");
+    
+    // Calculate and print the time between press and release
+    unsigned long pressReleaseTime = releaseStartTime - pressStartTime;
+    Serial.print("Time between press and release: ");
+    Serial.print(pressReleaseTime);
+    Serial.println(" ms");
+  }
+
+  buttonState = currentButtonState; // Update the button state for the next iteration
+}
